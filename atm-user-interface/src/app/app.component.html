@@ -5,10 +5,16 @@
     <h3>What would you like to do?</h3>
   </div>
   <nav style="text-align: center">
-    <button routerLink="/balance">Balance</button>
-    <button routerLink="/deposit">Deposit</button>
-    <button routerLink="/withdraw">Withdraw</button>
+    <!-- Using binding to follow Angular practice
+     - great for when your route changes dynamically based on a variable
+     - great for when navigating query params
+     - great for when you are doing routes based on conditions
+    -->
+    <button [routerLink]="['/balance']">Balance</button>
+    <button [routerLink]="['/deposit']">Deposit</button>
+    <button [routerLink]="['/withdraw']">Withdraw</button>
   </nav>
-
+  <!-- Whereever you use the router-outlet, have to import RouterModule, in this case, 
+   import in app.component.ts since this is an html file -->
   <router-outlet></router-outlet>
 </div>
