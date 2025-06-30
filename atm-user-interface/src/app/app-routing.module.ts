@@ -7,7 +7,9 @@ import { WithdrawComponent } from './withdraw/withdraw.component';
 import { DepositComponent } from './deposit/deposit.component';
 
 export const routes: Routes = [
-  //
+  //Addressing the instance for when the path is an empty string.
+  //full means the whole url path needs to be matched.
+  { path: '', redirectTo: '/balance', pathMatch: 'full' },
   { path: 'balance', component: BalanceComponent },
   {
     path: 'deposit',
