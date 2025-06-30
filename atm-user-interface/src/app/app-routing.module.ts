@@ -12,6 +12,12 @@ export const routes: Routes = [
   {
     path: 'deposit',
     component: DepositComponent,
+
+    // Adding the Children routes
+    children: [
+      { path: 'coins', component: DepositCoinsComponent },
+      { path: 'notes', component: DepositNotesComponent },
+    ],
   },
   { path: 'withdraw', component: WithdrawComponent },
 ];
