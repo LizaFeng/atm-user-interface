@@ -5,6 +5,7 @@ import { DepositCoinsComponent } from './deposit-coins/deposit-coins.component';
 import { DepositNotesComponent } from './deposit-notes/deposit-notes.component';
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { DepositComponent } from './deposit/deposit.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 export const routes: Routes = [
   //Addressing the instance for when the path is an empty string.
@@ -22,6 +23,7 @@ export const routes: Routes = [
     ],
   },
   { path: 'withdraw', component: WithdrawComponent },
+  { path: '**', component: PagenotfoundComponent },
 ];
 
 @NgModule({
